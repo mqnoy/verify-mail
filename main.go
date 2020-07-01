@@ -25,9 +25,9 @@ func main()  {
 	router.HandleFunc("/verify", verifyEmail).Methods("POST")
 
 
-	fmt.Println("Server Running on 127.0.0.1:8080")
+	fmt.Println("Server Running on port 80")
 
-	log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":80", router))
 }
 
 func verifyEmail(w http.ResponseWriter, r *http.Request) {
